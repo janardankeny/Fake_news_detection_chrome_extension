@@ -1,0 +1,25 @@
+{
+    "name": "VeriFacts",
+    "version": "1.0.0",
+    "description": "Fake",
+    "permissions": ["tts", "activeTab"],
+    "icons": { "16": "assets/fnewsfix.png",
+    "48": "assets/fnewsfix.png",
+    "128": "assets/fnewsfix.png"
+    },
+    "content_scripts":[
+        {
+            "matches":[
+                "https://*.google.com/*","http://localhost:5000/generate_text"
+            ],
+            "js":["script.js"]
+        }
+    ],
+    "manifest_version": 3,
+    "author": "Keny Sahab",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Latest Covid Report"
+    }
+
+}
